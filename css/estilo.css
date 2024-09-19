@@ -1,0 +1,67 @@
+body{
+    background-color: gray;
+}
+.contenedor{
+    background-color: aliceblue;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    display: grid;
+    grid-gap:10px ;
+    grid-template-columns: 1fr 2fr 1fr ;
+    grid-template-rows: 2fr 1fr 8fr 2fr ;
+    grid-template-areas:    "header header header"
+                            "nav nav nav "
+                            "section section ads"
+                            "footer footer footer";
+}
+.contenedor .header{
+    background-color: rgb(255, 59, 5);
+    grid-column: header;
+}
+.contenedor .nav{
+    background-color: rgb(119, 186, 244);
+    grid-column: nav;
+}
+.contenedor .section{
+    background-color: aqua;
+    grid-column: section;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    text-align: center;
+    grid-template-areas:  "contenido contenido " "contenido1 contenido2";
+}
+.minisection{
+    background-color: aquamarine;
+    margin: 10px;
+    border: solid;
+    height: 80px;
+    grid-column: contenido1;
+}
+.minisection2{
+    background-color: aquamarine;
+    margin: 10px;
+    border: solid;
+    grid-column: contenido2;
+}
+.contenedor .ads{
+    background-color: brown;
+    grid-column: ads;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.miniads{
+    background-color: rgba(164, 102, 44, 0.893);
+    border: solid;
+    margin: 4px;
+    height: 65%;
+    width: 80%;
+    flex-direction: row-reverse;
+}
+.contenedor .footer{
+    background-color: orange;
+    grid-column: footer;
+}
